@@ -23,7 +23,7 @@ function transformStateWithClones(state, actions) {
     } else if (actions[i].type === 'removeProperties') {
       const remove = actions[i].keysToRemove;
 
-      for (const key in remove) {
+      for (const key of remove) {
         delete novo[remove[key]];
       }
     }
