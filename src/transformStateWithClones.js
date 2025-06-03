@@ -24,8 +24,8 @@ function transformStateWithClones(state, actions) {
       const remove = actions[i].keysToRemove;
 
       for (const key of remove) {
-        delete novo[remove[key]];
-      } 
+        delete novo[key];
+      }
     }
     historicoEstados.push({ ...novo });
   }
